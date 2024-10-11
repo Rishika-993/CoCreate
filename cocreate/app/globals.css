@@ -5,13 +5,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border: #e5e7eb;
+  --text-color: #333333;
+  --heading-color: #444444;
+  --hover1: #8b5cf6;
+  --box: #e5e7eb;
+  --box-foreground: #1f2937;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: black;
+  --foreground: #ffffff;
+  --border: #374151;
+  --text-color: #ffffff;
+  --heading-color: #ffffff;
+  --hover1: #8b5cf6;
+  --box: #1f2937;
+  --box-foreground: #e5e7eb;
 }
 
 body {

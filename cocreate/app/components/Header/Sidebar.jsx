@@ -17,19 +17,19 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
     { title: 'Home', icon: Home, href: '/' },
     { title: 'Blog', icon: BookOpen, href: '/blog' },
     { title: 'Contact', icon: Mail, href: '/contact' },
-    { title: 'Twitter', icon: Twitter, href: '/twitter-content' },
-    { title: 'Instagram', icon: Instagram, href: '/instagram-content' },
-    { title: 'LinkedIn', icon: Linkedin, href: '/linkedin-content' },
+    { title: 'Twitter Post', icon: Twitter, href: '/twitter-content' },
+    { title: 'Instagram Post', icon: Instagram, href: '/instagram-content' },
+    { title: 'LinkedIn Post', icon: Linkedin, href: '/linkedin-content' },
     { title: 'Tags', icon: Tags, href: '/tags' },
   ];
 
   const sidebarClasses = isMobile
-    ? `fixed top-[81px] left-0 h-[calc(100vh-64px)] bg-white dark:bg-black
+    ? `fixed top-[81px] left-0 h-[calc(100vh)] bg-white dark:bg-black
        transform transition-transform duration-300 ease-in-out z-50
        w-16 shadow-lg overflow-hidden border-r border-gray-200 dark:border-gray-700
        ${isOpen ? 'translate-x-0' : '-translate-x-full'}`
-    : `fixed top-[81px] left-0 h-[calc(100vh-64px)] bg-white dark:bg-black
-       w-64 shadow-lg overflow-hidden z-50 border-r border-gray-200 dark:border-gray-700`;
+    : `fixed top-[81px] left-0 h-[calc(100vh-81px)] bg-white dark:bg-black
+       w-56 shadow-lg overflow-hidden z-50 border-r border-gray-200 dark:border-gray-700`;
 
   return (
     <div className={sidebarClasses}>

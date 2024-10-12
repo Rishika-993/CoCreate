@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "name": "Alfredo Lubin",
+      "image": "/channel-2.jpeg"
+    },
+    "category": "Technology",
+    "title": "Getting Started with Next.js",
+    "excerpt": "Learn how to build modern web applications with Next.js, Learn how to build modern web applications with Next.js, Learn how to build modern web applications with Next.js, Learn how to build modern web applications with Next.js",
+    "date": "2024-03-15",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 2,
+    "author": {
+      "name": "Alfredo Lubin",
+      "image": "/channel-2.jpeg"
+    },
+    "category": "Technology",
+    "title": "Mastering Tailwind CSS",
+    "excerpt": "Discover the power of utility-first CSS with Tailwind",
+    "date": "2024-03-10",
+    "readTime": "7 min read"
+  },
+  {
+    "id": 3,
+    "author": {
+      "name": "Alfredo Lubin",
+      "image": "/channel-2.jpeg"
+    },
+    "category": "Technology",
+    "title": "The Power of React Hooks",
+    "excerpt": "Simplify your React components with hooks",
+    "date": "2024-03-05",
+    "readTime": "6 min read"
+  }
+]

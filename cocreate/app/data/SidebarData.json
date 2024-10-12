@@ -1,0 +1,48 @@
+{
+    "curatedPicks": [
+      {
+        "author": {
+          "name": "Alfredo Lubin",
+          "image": "/channel-2.jpeg"
+        },
+        "category": "Technology",
+        "title": "New Solar Panel Technology Increases Efficiency by 30%",
+        "image": "/img-1.jpg",
+        "date": "11 July 2024",
+        "readTime": "2 min read"
+      },
+      {
+        "author": {
+          "name": "Justin Levin",
+          "image": "/channel-2.jpeg"
+        },
+        "category": "Environment",
+        "title": "World's Oldest Known Tree Discovered in Australia",
+        "image": "/img-1.jpg",
+        "date": "12 July 2024",
+        "readTime": "4 min read"
+      },
+      {
+        "author": {
+          "name": "Charlie Dorwart",
+          "image": "/dark-account.png"
+        },
+        "category": "Technology",
+        "title": "AI Technology Can Now Create Art in the Style of Famous Painters",
+        "image": "/img-1.jpg",
+        "date": "13 July 2024",
+        "readTime": "5 min read"
+      }
+    ],
+    "categories": [
+      "Fashion",
+      "Politics",
+      "Entertainment",
+      "Sports",
+      "Technology",
+      "Finance",
+      "Health & Wellness",
+      "Science",
+      "Lifestyle"
+    ]
+  }

@@ -5,7 +5,6 @@ import lightaccount from '../../../public/light-account.png'
 import darkaccount from '../../../public/dark-account.png'  
 import ThemeSwitcher from './ThemeSwitcher'
 import { useTheme } from '../../context/theme'
-import { useRouter } from 'next/router'
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Sidebar from './Sidebar'

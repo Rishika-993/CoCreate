@@ -20,7 +20,7 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
     { title: 'Twitter Post', icon: Twitter, href: '/twitter-content' },
     { title: 'Instagram Post', icon: Instagram, href: '/instagram-content' },
     { title: 'LinkedIn Post', icon: Linkedin, href: '/linkedin-content' },
-    { title: 'Tags', icon: Tags, href: '/tags' },
+    { title: 'Categories', icon: Tags, href: '/tags' },
   ];
 
   const sidebarClasses = isMobile

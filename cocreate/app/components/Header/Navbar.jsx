@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)] bg-background">
-        <div className="container mx-auto py-2 px-5 md:p-2 md:px-8">
+        <div className="py-2 px-5 md:p-2 md:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <button
@@ -30,9 +30,11 @@ export default function Navbar() {
               </Link>
             </div>
             
-            <div className='flex row space-x-6'>
-              <div className="flex items-center space-x-4">
-                <button className="hover:text-[var(--hover1)]">SignIn</button>
+            <div className='flex row sm:space-x-6 space-x-4'>
+              <div className="flex items-center space-x-2">
+                <Link href="/signin">
+                <button className="hover:text-[var(--hover1)] border px-2 rounded-lg border-[var(--border)]">SignIn</button>
+                </Link>
                 <Image 
                   src={theme === "dark" ? darkaccount : lightaccount} 
                   alt="account icon"

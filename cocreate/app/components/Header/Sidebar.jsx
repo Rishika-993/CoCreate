@@ -9,7 +9,8 @@ import {
   Instagram, 
   Linkedin, 
   Tags,
-  ChevronRight
+  ChevronRight,
+  Bookmark
 } from 'lucide-react';
 
 const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
@@ -21,7 +22,7 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
     { title: 'Create Post', icon: Instagram, href: '/instagram-content' },
     { title: 'Create Post', icon: Linkedin, href: '/linkedin-content' },
     { title: 'Categories', icon: Tags, href: '/tags' },
-    { title: 'BookMarks', icon: Tags, href: '/bookmarks' },
+    { title: 'BookMarks', icon: Bookmark, href: '/bookmarks' },
   ];
 
   const sidebarClasses = isMobile

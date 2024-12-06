@@ -5,64 +5,47 @@ import lightaccount from '../../../public/light-account.png'
 import darkaccount from '../../../public/dark-account.png'  
 import ThemeSwitcher from './ThemeSwitcher'
 import { useTheme } from '../../context/theme'
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu } from 'lucide-react';
-import Sidebar from './Sidebar'
 
-export default function Navbar() {
+export default function Navbar({ onToggleSidebar }) {
   const { theme } = useTheme()
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)] bg-background">
-        <div className="py-2 px-5 md:p-2 md:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <button
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="md:hidden mr-4 rounded-md"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-              <Link href="/" className="text-xl font-bold">
-                CoCreate
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)] bg-background w-full">
+      <div className="py-2 px-5 md:p-2 md:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <button
+              onClick={onToggleSidebar}
+              className="mr-4 rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+            <Link href="/" className="text-xl font-bold">
+              CoCreate
+            </Link>
+          </div>
+          
+          <div className='flex row sm:space-x-6 space-x-4'>
+            <div className="flex items-center space-x-2">
+              <Link href="/signin">
+                <button className="hover:text-[var(--hover1)] border px-2 py-1 rounded-lg border-[var(--border)] transition-colors duration-200">SignIn</button>
               </Link>
+              <Image 
+                src={theme === "dark" ? darkaccount : lightaccount} 
+                alt="account icon"
+                width={24}
+                height={24}
+                className="w-4 h-4 sm:w-6 sm:h-6"
+              />
             </div>
-            
-            <div className='flex row sm:space-x-6 space-x-4'>
-              <div className="flex items-center space-x-2">
-                <Link href="/signin">
-                <button className="hover:text-[var(--hover1)] border px-2 rounded-lg border-[var(--border)]">SignIn</button>
-                </Link>
-                <Image 
-                  src={theme === "dark" ? darkaccount : lightaccount} 
-                  alt="account icon"
-                  width={24}
-                  height={24}
-                  className="w-4 h-4 sm:w-6 sm:h-6"
-                />
-              </div>
-              <div>
-                <ThemeSwitcher />
-              </div>
+            <div>
+              <ThemeSwitcher />
             </div>
           </div>
         </div>
-      </nav>
-      
-      {/* Mobile Sidebar */}
-      <div className="md:hidden">
-        <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} isMobile={true} />
       </div>
-      
-      {/* Desktop Sidebar */}
-      <div className="hidden md:block">
-        <Sidebar isOpen={true} setIsOpen={() => {}} isMobile={false} />
-      </div>
-      
-      {/* Spacer div to prevent content from going under the fixed navbar */}
-      <div className="h-16"></div>
-    </>
+    </nav>
   )
 }

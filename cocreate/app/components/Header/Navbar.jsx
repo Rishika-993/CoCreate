@@ -30,7 +30,7 @@ export default function Navbar({ onToggleSidebar }) {
           <div className='flex row sm:space-x-6 space-x-4'>
             <div className="flex items-center space-x-2">
               <Link href="/signin">
-                <button className="hover:text-[var(--hover1)] border px-2 py-1 rounded-lg border-[var(--border)] transition-colors duration-200">SignIn</button>
+                <button className="hover:text-[var(--hover1)] border px-2 py-0.5 rounded-lg border-[var(--border)] text-sm">SignIn</button>
               </Link>
               <Image 
                 src={theme === "dark" ? darkaccount : lightaccount} 

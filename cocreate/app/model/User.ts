@@ -35,6 +35,8 @@ export interface IUser extends Document {
   name?: string;
   bio?: string;
   avatar?: string;
+  verifyCode: string;
+  verifyCodeExpiry: Date;
   socialMediaAccounts: {
     twitter: ISocialMediaAccount;
     instagram: ISocialMediaAccount;
@@ -46,10 +48,21 @@ export interface IUser extends Document {
   socialMediaPosts?: ISocialMediaPost['_id'][];
 }
 
-const UserSchema = new Schema<IUser>({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  username: { type: String, required: true, unique: true },
+const userSchema = new Schema<IUser>({
+  email: { 
+    type: String, 
+    required: [true, "Please provide a email"], 
+    unique: true 
+  },
+  password: { 
+    type: String, 
+    required:  [true, "Please provide a password"],
+  },
+  username: { 
+    type: String, 
+    required: [true, "Please provide a username"],
+    unique: true
+  },
   name: String,
   bio: String,
   avatar: String,
@@ -77,4 +90,4 @@ const UserSchema = new Schema<IUser>({
   lastLogin: Date
 });
 
-export const User = (mongoose.models.User as mongoose.Model<User>) || mongoose.model<IUser>('User', UserSchema);
+export const User = (mongoose.models.users) || mongoose.model<IUser>('users', userSchema);

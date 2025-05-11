@@ -11,6 +11,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.447.0",
     "mongoose": "^8.7.1",
     "next": "14.2.13",

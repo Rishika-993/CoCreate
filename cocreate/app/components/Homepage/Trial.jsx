@@ -10,7 +10,7 @@ const DraggableDivider = () => {
     e.preventDefault();
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
-  }, []);
+  }, [handleMouseMove, handleMouseUp]);
 
   const handleMouseMove = useCallback((e) => {
     if (containerRef.current) {
